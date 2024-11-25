@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-link" href="/new-match">new match</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="/matches">completed matches</a>
+        </li>
+      </ul>
+      <a class="logo" href="/">
+        <img class="logo-image" src="../../img/tennis_ball.svg" alt="logo">
+      </a>
+    </nav>
+  </div>
+</header>

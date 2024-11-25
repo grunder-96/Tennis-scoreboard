@@ -2,27 +2,19 @@
 <html>
     <head>
         <title>Tennis scoreboard</title>
-        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
-        <div class="container">
-            <div class="scoreboard_wrapper shadow">
-                <div class="scoreboard_title_wrapper">
-                    <h1>COURT No. 18</h1>
-                </div>
-                <div class="buttons-wrapper">
-                    <form action="/new-match">
-                        <button type="submit" class="button shadow">New match</button>
-                    </form>
-                    <form action="/matches">
-                        <button type="submit" class="button shadow">Completed matches</button>
-                    </form>
+        <%@ include file="header.jspf" %>
+        <main class="main">
+            <div class="container">
+                <div class="button-container">
+                    <a class="button" href="/new-match">new match</a>
+                    <a class="button" href="/matches">completed matches</a>
                 </div>
             </div>
-            <div class="poles-wrapper">
-                <div class="poles shadow"></div>
-                <div class="poles shadow"></div>
-            </div>
-        </div>
+        </main>
+        <%@ include file="footer.jspf" %>
     </body>
 </html>
