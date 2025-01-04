@@ -10,7 +10,7 @@
         </li>
       </ul>
       <a class="logo" href="/">
-        <img class="logo-image" src="../../img/tennis_ball.svg" alt="logo">
+        <img class="logo-image" src="../../static/img/tennis_ball.svg" alt="logo">
       </a>
     </nav>
   </div>

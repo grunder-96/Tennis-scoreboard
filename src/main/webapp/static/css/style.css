@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Doto';
-    src: url('/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
+    src: url('/static/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Doto';
-    src: url('/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
+    src: url('/static/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }

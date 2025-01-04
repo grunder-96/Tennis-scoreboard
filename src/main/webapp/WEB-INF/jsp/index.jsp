@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>Tennis scoreboard</title>
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../static/css/normalize.css">
+        <link rel="stylesheet" href="../../static/css/style.css">
     </head>
     <body>
         <%@ include file="header.jspf" %>

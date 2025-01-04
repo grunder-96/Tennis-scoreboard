@@ -3,8 +3,8 @@
 <html>
     <head>
         <title>Create new match</title>
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../static/css/normalize.css">
+        <link rel="stylesheet" href="../../static/css/style.css">
     </head>
     <body>
         <%@ include file="header.jspf" %>
@@ -16,8 +16,8 @@
                             <label for="firstPlayerId">First player name:
                                 <input type="text" name="firstPlayerName" id="firstPlayerId" value="${firstPlayerName}">
                                 <c:set var="commonPlayerAnnotations" value="${violations['']}"></c:set>
-                                <c:if test="${violations.containsKey('firstPlayerName') || not empty commonPlayerAnnotations}">
-                                    <c:set var="firstPlayerAnnotations" value="${violations['firstPlayerName']}"></c:set>
+                                <c:if test="${violations.containsKey('firstPlayer.name') || not empty commonPlayerAnnotations}">
+                                    <c:set var="firstPlayerAnnotations" value="${violations['firstPlayer.name']}"></c:set>
                                     <c:choose>
                                         <c:when test="${not empty firstPlayerAnnotations['NotBlank']}">
                                             <div class="error">${firstPlayerAnnotations['NotBlank']}</div>
@@ -38,8 +38,8 @@
                         <div class="form-group">
                             <label for="secondPlayerId">Second player name:
                                 <input type="text" name="secondPlayerName" id="secondPlayerId" value="${secondPlayerName}">
-                                <c:if test="${violations.containsKey('secondPlayerName') || not empty commonPlayerAnnotations}">
-                                    <c:set var="secondPlayerAnnotations" value="${violations['secondPlayerName']}"></c:set>
+                                <c:if test="${violations.containsKey('secondPlayer.name') || not empty commonPlayerAnnotations}">
+                                    <c:set var="secondPlayerAnnotations" value="${violations['secondPlayer.name']}"></c:set>
                                     <c:choose>
                                         <c:when test="${not empty secondPlayerAnnotations['NotBlank']}">
                                             <div class="error">${secondPlayerAnnotations['NotBlank']}</div>
