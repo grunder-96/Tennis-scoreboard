@@ -179,6 +179,34 @@ body {
     white-space: nowrap;
 }
 
+table {
+    width: 65%;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid #9ceb60;
+}
+
+td, th {
+    font-size: 20px;
+    color: #9ceb60;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.score-increase-form {
+    margin-bottom : 0;
+}
+
+.score-increase-form-button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-image: url(../../static/img/increase.svg);
+    background-size: cover;
+}
+
 .footer-image-container {
     display: flex;
     justify-content: center;
