@@ -18,7 +18,7 @@ public class PlayerRepository {
         Transaction transaction = session.beginTransaction();
 
         Optional<Player> maybePlayer = session
-                .createQuery("from Player where name = :name", Player.class)
+                .createQuery("select p from Player p  where p.name = :name", Player.class)
                 .setParameter("name", playerName)
                 .uniqueResultOptional();
 
