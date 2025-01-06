@@ -12,10 +12,9 @@ public class PlayerService {
     private final PlayerRepository playerRepository = new PlayerRepository();
 
     public Player findOrSave(PlayerDto playerDto) {
-
         Optional<Player> maybePlayer = playerRepository.findByPlayerName(playerDto.getName());
 
-        return maybePlayer.orElse(playerRepository.save(
+        return maybePlayer.orElseGet(() -> playerRepository.save(
                 PlayerMapper.INSTANCE.fromPlayerDto(playerDto))
         );
     }
