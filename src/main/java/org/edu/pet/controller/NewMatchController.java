@@ -61,7 +61,7 @@ public class NewMatchController extends HttpServlet {
             req.getRequestDispatcher(JspHelper.getPath("createNewMatch")).forward(req, resp);
         } else {
             UUID uuid = ongoingMatchesService.createMatch(createMatchDto);
-            resp.sendRedirect(JspHelper.getPath("/match-score?uuid=%s".formatted(uuid.toString())));
+            resp.sendRedirect("/match-score?uuid=%s".formatted(uuid.toString()));
         }
     }
 }
