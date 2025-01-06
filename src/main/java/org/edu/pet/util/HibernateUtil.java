@@ -12,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
 
     @Getter
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     static {
         sessionFactory = buildSessionFactory();
