@@ -3,14 +3,14 @@
     <nav class="nav">
       <ul class="menu">
         <li class="menu-item">
-          <a class="menu-link" href="/new-match">new match</a>
+          <a class="menu-link" href="${pageContext.request.contextPath}/new-match">new match</a>
         </li>
         <li class="menu-item">
-          <a class="menu-link" href="/matches">completed matches</a>
+          <a class="menu-link" href="${pageContext.request.contextPath}/matches">completed matches</a>
         </li>
       </ul>
-      <a class="logo" href="/">
-        <img class="logo-image" src="../../static/img/tennis_ball.svg" alt="logo">
+      <a class="logo" href="${pageContext.request.contextPath}">
+        <img class="logo-image" src="${pageContext.request.contextPath}/static/img/tennis_ball.svg" alt="logo">
       </a>
     </nav>
   </div>

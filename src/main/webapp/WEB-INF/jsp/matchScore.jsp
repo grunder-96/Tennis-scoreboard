@@ -3,8 +3,8 @@
 <html>
     <head>
         <title>Match score</title>
-        <link rel="stylesheet" href="../../static/css/normalize.css">
-        <link rel="stylesheet" href="../../static/css/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/normalize.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     </head>
     <body>
         <%@ include file="header.jspf" %>

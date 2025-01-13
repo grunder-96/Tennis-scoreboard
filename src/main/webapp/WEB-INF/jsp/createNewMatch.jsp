@@ -3,15 +3,15 @@
 <html>
     <head>
         <title>Create new match</title>
-        <link rel="stylesheet" href="../../static/css/normalize.css">
-        <link rel="stylesheet" href="../../static/css/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/normalize.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     </head>
     <body>
         <%@ include file="header.jspf" %>
         <main class="main">
             <div class="container">
                 <div class="form-container">
-                    <form class="form" action="/new-match"method="POST">
+                    <form class="form" action="${pageContext.request.contextPath}/new-match"method="POST">
                         <div class="form-group">
                             <label for="firstPlayerId">First player name:
                                 <input type="text" name="firstPlayerName" id="firstPlayerId" value="${firstPlayerName}">
