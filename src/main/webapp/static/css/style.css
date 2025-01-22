@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Doto';
-    src: url('/static/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
+    src: url('../fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Doto';
-    src: url('/static/fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
+    src: url('../fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -203,7 +203,7 @@ td, th {
     width: 30px;
     height: 30px;
     border: 0;
-    background-image: url(../../static/img/increase.svg);
+    background-image: url(../img/increase.svg);
     background-size: cover;
 }
 
