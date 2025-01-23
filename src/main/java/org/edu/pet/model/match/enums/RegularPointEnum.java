@@ -1,4 +1,4 @@
-package org.edu.pet.model.match;
+package org.edu.pet.model.match.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
