@@ -1,10 +1,11 @@
 package org.edu.pet.service;
 
 import org.edu.pet.dto.CreateMatchDto;
-import org.edu.pet.dto.match.MatchScore;
-import org.edu.pet.dto.match.PlayerScore;
-import org.edu.pet.entity.Player;
+import org.edu.pet.model.match.MatchPlayer;
+import org.edu.pet.model.match.MatchScore;
+import org.edu.pet.model.entity.Player;
 import org.edu.pet.exception.OngoingMatchNotFoundException;
+import org.edu.pet.mapper.PlayerMapper;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -13,7 +14,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class OngoingMatchesService {
 
     private static final ConcurrentHashMap<UUID, MatchScore> ONGOING_MATCHES = new ConcurrentHashMap<>();
-    
     private final PlayerService playerService = new PlayerService();
 
     public UUID createMatch(CreateMatchDto createMatchDto) {
@@ -22,17 +22,12 @@ public class OngoingMatchesService {
 
         UUID uuid = UUID.randomUUID();
 
+        MatchPlayer firstPlayerInfo = PlayerMapper.INSTANCE.toMatchPlayer(firstPlayer);
+        MatchPlayer secondPlayerInfo = PlayerMapper.INSTANCE.toMatchPlayer(secondPlayer);
+
         MatchScore matchScore = MatchScore.builder()
-                .firstPlayerScore(
-                        PlayerScore.builder()
-                                .player(firstPlayer)
-                                .build()
-                )
-                .secondPlayerScore(
-                        PlayerScore.builder()
-                                .player(secondPlayer)
-                                .build()
-                )
+                .firstPlayer(firstPlayerInfo)
+                .secondPlayer(secondPlayerInfo)
                 .build();
 
         ONGOING_MATCHES.put(uuid, matchScore);

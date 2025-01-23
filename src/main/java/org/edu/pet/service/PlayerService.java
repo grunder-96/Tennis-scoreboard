@@ -1,7 +1,7 @@
 package org.edu.pet.service;
 
 import org.edu.pet.dto.PlayerDto;
-import org.edu.pet.entity.Player;
+import org.edu.pet.model.entity.Player;
 import org.edu.pet.mapper.PlayerMapper;
 import org.edu.pet.repository.PlayerRepository;
 

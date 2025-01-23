@@ -23,40 +23,40 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.firstPlayerScore.player.name}"/></p>
+                                    <p><c:out value="${matchScore.firstPlayer.name}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.firstPlayerScore.sets}"/></p>
+                                    <p><c:out value="${matchScore.firstPlayer.playerScore.sets}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.firstPlayerScore.games}"/></p>
+                                    <p><c:out value="${matchScore.firstPlayer.playerScore.games}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.firstPlayerScore.points.value}"/></p>
+                                    <p><c:out value="${matchScore.firstPlayer.playerScore.points.view()}"/></p>
                                 </td>
                                 <td>
-                                    <form class="score-increase-form" action="/match-score" method="POST">
-                                        <input type="hidden" name="id" value="${sessionScope.firstPlayerScore.player.id}">
+                                    <form class="score-increase-form" action="${pageContext.request.contextPath}/match-score?uuid=${param.uuid}" method="POST">
+                                        <input type="hidden" name="winnerId" value="${matchScore.firstPlayer.id}">
                                         <button class="score-increase-form-button" type="submit"></button>
                                     </form>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.secondPlayerScore.player.name}"/></p>
+                                    <p><c:out value="${matchScore.secondPlayer.name}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.secondPlayerScore.sets}"/></p>
+                                    <p><c:out value="${matchScore.secondPlayer.playerScore.sets}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.secondPlayerScore.games}"/></p>
+                                    <p><c:out value="${matchScore.secondPlayer.playerScore.games}"/></p>
                                 </td>
                                 <td>
-                                    <p><c:out value="${sessionScope.score.secondPlayerScore.points.value}"/></p>
+                                    <p><c:out value="${matchScore.secondPlayer.playerScore.points.view()}"/></p>
                                 </td>
                                 <td>
-                                    <form class="score-increase-form" action="/match-score" method="POST">
-                                        <input type="hidden" name="id" value="${sessionScope.secondPlayerScore.player.id}">
+                                    <form class="score-increase-form" action="${pageContext.request.contextPath}/match-score?uuid=${param.uuid}" method="POST">
+                                        <input type="hidden" name="winnerId" value="${matchScore.secondPlayer.id}">
                                         <button class="score-increase-form-button" type="submit"></button>
                                     </form>
                                 </td>

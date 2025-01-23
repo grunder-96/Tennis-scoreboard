@@ -2,8 +2,8 @@ package org.edu.pet.util;
 
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
-import org.edu.pet.entity.Match;
-import org.edu.pet.entity.Player;
+import org.edu.pet.model.entity.Match;
+import org.edu.pet.model.entity.Player;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
