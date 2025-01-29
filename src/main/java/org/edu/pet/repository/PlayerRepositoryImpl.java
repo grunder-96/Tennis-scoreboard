@@ -8,10 +8,11 @@ import org.hibernate.Transaction;
 
 import java.util.Optional;
 
-public class PlayerRepositoryImpl {
+public class PlayerRepositoryImpl implements PlayerRepository {
 
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
+    @Override
     public Optional<Player> findByPlayerName(String playerName) {
         Session session = sessionFactory.getCurrentSession();
 
@@ -27,6 +28,7 @@ public class PlayerRepositoryImpl {
         return maybePlayer;
     }
 
+    @Override
     public Player save(Player player) {
         Session session = sessionFactory.getCurrentSession();
 
