@@ -3,18 +3,18 @@ package org.edu.pet.service;
 import org.edu.pet.dto.PlayerDto;
 import org.edu.pet.model.entity.Player;
 import org.edu.pet.mapper.PlayerMapper;
-import org.edu.pet.repository.PlayerRepository;
+import org.edu.pet.repository.PlayerRepositoryImpl;
 
 import java.util.Optional;
 
 public class PlayerService {
 
-    private final PlayerRepository playerRepository = new PlayerRepository();
+    private final PlayerRepositoryImpl playerRepositoryImpl = new PlayerRepositoryImpl();
 
     public Player findOrSave(PlayerDto playerDto) {
-        Optional<Player> maybePlayer = playerRepository.findByPlayerName(playerDto.getName());
+        Optional<Player> maybePlayer = playerRepositoryImpl.findByPlayerName(playerDto.getName());
 
-        return maybePlayer.orElseGet(() -> playerRepository.save(
+        return maybePlayer.orElseGet(() -> playerRepositoryImpl.save(
                 PlayerMapper.INSTANCE.fromPlayerDto(playerDto))
         );
     }

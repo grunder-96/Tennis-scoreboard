@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 
 import java.util.Optional;
 
-public class PlayerRepository {
+public class PlayerRepositoryImpl {
 
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
