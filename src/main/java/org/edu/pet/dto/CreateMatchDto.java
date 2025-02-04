@@ -1,20 +1,23 @@
 package org.edu.pet.dto;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Value;
 import org.edu.pet.validation.hibernate.NotSame;
 
-@Data
-@NoArgsConstructor
+@Value
+//@Data
+//@NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
 @NotSame(firstFieldPath = "firstPlayer.name", secondFieldPath = "secondPlayer.name")
 public class CreateMatchDto {
 
     @Valid
-    private PlayerDto firstPlayer;
+    @NotNull
+    PlayerDto firstPlayer;
 
     @Valid
-    private PlayerDto secondPlayer;
+    @NotNull
+    PlayerDto secondPlayer;
 }
