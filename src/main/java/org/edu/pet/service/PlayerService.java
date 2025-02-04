@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class PlayerService {
 
-    private final PlayerRepositoryImpl playerRepositoryImpl = new PlayerRepositoryImpl();
+    private final PlayerRepositoryImpl playerRepositoryImpl = PlayerRepositoryImpl.getInstance();
 
     public Player findOrSave(PlayerDto playerDto) {
         Optional<Player> maybePlayer = playerRepositoryImpl.findByPlayerName(playerDto.getName());
