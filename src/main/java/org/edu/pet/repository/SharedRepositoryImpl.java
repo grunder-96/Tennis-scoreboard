@@ -6,7 +6,7 @@ import org.hibernate.Session;
 
 import java.lang.reflect.Proxy;
 
-public class SharedRepositoryImpl<E> implements SharedRepository<E> {
+public abstract class SharedRepositoryImpl<E> implements SharedRepository<E> {
 
     protected final Session session = getCurrentSession();
 
