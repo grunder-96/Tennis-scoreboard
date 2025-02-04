@@ -7,8 +7,6 @@ import lombok.Value;
 import org.edu.pet.validation.hibernate.NotSame;
 
 @Value
-//@Data
-//@NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
 @NotSame(firstFieldPath = "firstPlayer.name", secondFieldPath = "secondPlayer.name")
 public class CreateMatchDto {
