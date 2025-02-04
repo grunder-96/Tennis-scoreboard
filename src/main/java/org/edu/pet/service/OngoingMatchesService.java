@@ -16,7 +16,7 @@ public class OngoingMatchesService {
     private static final ConcurrentHashMap<UUID, MatchScore> ONGOING_MATCHES = new ConcurrentHashMap<>();
     private final PlayerService playerService = new PlayerService();
 
-    public UUID createMatch(CreateMatchDto createMatchDto) {
+    public UUID createMathScore(CreateMatchDto createMatchDto) {
         Player firstPlayer = playerService.findOrSave(createMatchDto.getFirstPlayer());
         Player secondPlayer = playerService.findOrSave(createMatchDto.getSecondPlayer());
 
@@ -35,7 +35,7 @@ public class OngoingMatchesService {
         return uuid;
     }
 
-    public MatchScore getMatchScore(UUID uuid) {
+    public MatchScore get(UUID uuid) {
         return Optional.ofNullable(ONGOING_MATCHES.get(uuid))
                 .orElseThrow(() -> new OngoingMatchNotFoundException(
                         "Ongoing match with uuid %s not found".formatted(uuid)
