@@ -14,6 +14,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class OngoingMatchesService {
 
     private static final ConcurrentHashMap<UUID, MatchScore> ONGOING_MATCHES = new ConcurrentHashMap<>();
+
+    private final PlayerMapper mapper = PlayerMapper.INSTANCE;
+
     private final PlayerService playerService = new PlayerService();
 
     public UUID createMathScore(CreateMatchDto createMatchDto) {
@@ -22,8 +25,8 @@ public class OngoingMatchesService {
 
         UUID uuid = UUID.randomUUID();
 
-        MatchPlayer firstPlayerInfo = PlayerMapper.INSTANCE.toMatchPlayer(firstPlayer);
-        MatchPlayer secondPlayerInfo = PlayerMapper.INSTANCE.toMatchPlayer(secondPlayer);
+        MatchPlayer firstPlayerInfo = mapper.toMatchPlayer(firstPlayer);
+        MatchPlayer secondPlayerInfo = mapper.toMatchPlayer(secondPlayer);
 
         MatchScore matchScore = MatchScore.builder()
                 .firstPlayer(firstPlayerInfo)
