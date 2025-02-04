@@ -41,4 +41,8 @@ public class OngoingMatchesService {
                         "Ongoing match with uuid %s not found".formatted(uuid)
                 ));
     }
+
+    public boolean remove(UUID uuid, MatchScore matchScore) {
+        return ONGOING_MATCHES.remove(uuid, matchScore);
+    }
 }
