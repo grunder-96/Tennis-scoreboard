@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.edu.pet.model.match.MatchScore;
+import org.edu.pet.service.FinishedMatchesPersistenceService;
 import org.edu.pet.service.MatchScoreCalculationService;
 import org.edu.pet.service.OngoingMatchesService;
 import org.edu.pet.util.JspHelper;
@@ -23,6 +24,7 @@ public class MatchScoreController extends HttpServlet {
 
     private final OngoingMatchesService ongoingMatchesService = new OngoingMatchesService();
     private final MatchScoreCalculationService calculationService = new MatchScoreCalculationService();
+    private final FinishedMatchesPersistenceService finishedMatchesPersistenceService = new FinishedMatchesPersistenceService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -48,6 +50,8 @@ public class MatchScoreController extends HttpServlet {
             return;
         }
 
-        resp.sendRedirect("%s/".formatted(req.getContextPath()));
+        finishedMatchesPersistenceService.saveMatch(matchScore);
+        ongoingMatchesService.delete(uuid);
+        resp.sendRedirect("%s/matches".formatted(req.getContextPath()));
     }
 }
