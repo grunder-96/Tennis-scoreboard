@@ -45,7 +45,7 @@ public class OngoingMatchesService {
                 ));
     }
 
-    public boolean remove(UUID uuid, MatchScore matchScore) {
-        return ONGOING_MATCHES.remove(uuid, matchScore);
+    public void delete(UUID uuid) {
+        ONGOING_MATCHES.remove(uuid);
     }
 }
