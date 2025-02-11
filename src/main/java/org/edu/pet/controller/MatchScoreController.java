@@ -28,7 +28,7 @@ public class MatchScoreController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         UUID uuid = RequestParamUtil.convertParamValue(req, UUID_PARAM_NAME, UUID::fromString);
-        MatchScore matchScore = ongoingMatchesService.getMatchScore(uuid);
+        MatchScore matchScore = ongoingMatchesService.get(uuid);
 
         req.setAttribute(MATCH_SCORE_PARAM_NAME, matchScore);
         req.getRequestDispatcher(JspHelper.getPath("matchScore")).forward(req, resp);
@@ -38,7 +38,7 @@ public class MatchScoreController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         UUID uuid = RequestParamUtil.convertParamValue(req, UUID_PARAM_NAME, UUID::fromString);
-        MatchScore matchScore = ongoingMatchesService.getMatchScore(uuid);
+        MatchScore matchScore = ongoingMatchesService.get(uuid);
         int winnerId = RequestParamUtil.convertParamValue(req, ID_WINNER_PARAM_NAME, Integer::parseInt);
 
         calculationService.calculate(matchScore, winnerId);
