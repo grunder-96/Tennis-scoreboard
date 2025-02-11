@@ -162,7 +162,7 @@ body {
     transition: 0.5s;
 }
 
-.button:hover, .submit:hover {
+.button:hover, .submit:hover, .pagination a:hover {
     background-color: grey;
 }
 
@@ -207,8 +207,44 @@ td, th {
     background-size: cover;
 }
 
+.name-filter-form, .name-filter-form input, .matches-table {
+    width: 100%;
+}
+
 .footer-image-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a, .pagination span {
+    padding: 4px 6px;
+    text-decoration: none;
+    border:1px solid #9ceb60;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination span {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a[href*="page"] {
+    font-weight: bold;
+}
+
+.matches-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
