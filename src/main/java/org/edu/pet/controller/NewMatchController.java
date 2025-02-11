@@ -60,7 +60,7 @@ public class NewMatchController extends HttpServlet {
             req.setAttribute("secondPlayerName", secondPlayerName);
             req.getRequestDispatcher(JspHelper.getPath("createNewMatch")).forward(req, resp);
         } else {
-            UUID uuid = ongoingMatchesService.createMatch(createMatchDto);
+            UUID uuid = ongoingMatchesService.createMathScore(createMatchDto);
             resp.sendRedirect("%s/match-score?uuid=%s".formatted(req.getContextPath(), uuid.toString()));
         }
     }
