@@ -25,12 +25,12 @@ public class OngoingMatchesService {
 
         UUID uuid = UUID.randomUUID();
 
-        MatchPlayer firstPlayerInfo = mapper.toMatchPlayer(firstPlayer);
-        MatchPlayer secondPlayerInfo = mapper.toMatchPlayer(secondPlayer);
+        MatchPlayer firstMatchPlayer = mapper.toMatchPlayer(firstPlayer);
+        MatchPlayer secondMatchPlayer = mapper.toMatchPlayer(secondPlayer);
 
         MatchScore matchScore = MatchScore.builder()
-                .firstPlayer(firstPlayerInfo)
-                .secondPlayer(secondPlayerInfo)
+                .firstPlayer(firstMatchPlayer)
+                .secondPlayer(secondMatchPlayer)
                 .build();
 
         ONGOING_MATCHES.put(uuid, matchScore);
