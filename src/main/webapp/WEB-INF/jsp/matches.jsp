@@ -11,8 +11,8 @@
         <%@ include file="header.jspf" %>
         <main class="main">
             <div class="container">
-                    <div class="content-container">
-                        <div class="matches-container">
+                    <div class="row-content-container">
+                        <div class="column-content-container">
                             <form class="name-filter-form" method="GET">
                                 <input type="text" name="filter_by_player_name" placeholder="Enter player name"
                                     value="${not empty pageDto.namePattern ? pageDto.namePattern : ""}" required pattern="\S+">

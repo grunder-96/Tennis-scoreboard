@@ -132,7 +132,7 @@ body {
     max-width: 550px;
 }
 
-.content-container {
+.row-content-container {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -242,7 +242,8 @@ td, th {
     font-weight: bold;
 }
 
-.matches-container {
+.column-content-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
