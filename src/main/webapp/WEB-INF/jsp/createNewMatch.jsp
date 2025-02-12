@@ -10,7 +10,7 @@
         <%@ include file="header.jspf" %>
         <main class="main">
             <div class="container">
-                <div class="form-container">
+                <div class="content-container">
                     <form class="form" action="${pageContext.request.contextPath}/new-match"method="POST">
                         <div class="form-group">
                             <label for="firstPlayerId">First player name:

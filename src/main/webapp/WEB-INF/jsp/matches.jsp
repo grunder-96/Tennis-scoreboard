@@ -11,7 +11,7 @@
         <%@ include file="header.jspf" %>
         <main class="main">
             <div class="container">
-                    <div class="form-container">
+                    <div class="content-container">
                         <div class="matches-container">
                             <form class="name-filter-form" method="GET">
                                 <input type="text" name="filter_by_player_name" placeholder="Enter player name"

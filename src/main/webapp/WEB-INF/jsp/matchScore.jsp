@@ -10,7 +10,7 @@
         <%@ include file="header.jspf" %>
         <main class="main">
             <div class="container">
-                <div class="form-container">
+                <div class="content-container">
                     <table class="table">
                         <thead>
                             <tr>
