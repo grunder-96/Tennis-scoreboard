@@ -52,6 +52,7 @@ public class MatchScoreController extends HttpServlet {
 
         finishedMatchesPersistenceService.saveMatch(matchScore);
         ongoingMatchesService.delete(uuid);
-        resp.sendRedirect("%s/matches".formatted(req.getContextPath()));
+        req.setAttribute(MATCH_SCORE_PARAM_NAME, matchScore);
+        req.getRequestDispatcher(JspHelper.getPath("finalScore")).forward(req, resp);
     }
 }
