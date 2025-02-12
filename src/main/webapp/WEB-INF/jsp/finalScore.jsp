@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="column-content-container">
                     <c:set var="winner" value="${matchScore.winner}" />
-                    <c:set var="loser" value="${matchScore.winner == mathScore.firstPlayer ?
+                    <c:set var="loser" value="${(winner.name == matchScore.firstPlayer.name) ?
                         matchScore.secondPlayer : matchScore.firstPlayer}" />
                     <h1>Match is finished!</h1>
                     <br>
