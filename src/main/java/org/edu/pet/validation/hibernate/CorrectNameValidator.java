@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class CorrectNameValidator implements ConstraintValidator<CorrectName, String> {
 
-    private static final String CORRECT_NAME_REGEX = "^[a-zA-Z]+['-]?[a-zA-Z]{2,}? [a-zA-Z]{2,}(-[a-zA-z]{2,})?$";
+    private static final String CORRECT_NAME_REGEX = "^[a-zA-Z]+['-]?([(a-zA-Z]{2,})? [a-zA-Z]+['-]?([(a-zA-Z]{2,})?$";
 
     @Override
     public void initialize(CorrectName constraintAnnotation) {

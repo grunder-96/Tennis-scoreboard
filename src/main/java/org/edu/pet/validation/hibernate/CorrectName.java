@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = CorrectNameValidator.class)
 public @interface CorrectName {
 
-    String message() default "Player name must be specified in the format \"Name Surname\"(en)";
+    String message() default "The name and surname must contain only english letters (minimum 1 character each).";
 
     Class<?>[] groups() default {};
 
