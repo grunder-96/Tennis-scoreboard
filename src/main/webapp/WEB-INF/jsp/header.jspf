@@ -9,7 +9,7 @@
           <a class="menu-link" href="${pageContext.request.contextPath}/matches">completed matches</a>
         </li>
       </ul>
-      <a class="logo" href="${pageContext.request.contextPath}">
+      <a class="logo" href="${pageContext.request.contextPath}/">
         <img class="logo-image" src="${pageContext.request.contextPath}/static/img/tennis_ball.svg" alt="logo">
       </a>
     </nav>
