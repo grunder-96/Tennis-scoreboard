@@ -14,7 +14,7 @@
                     <form class="form" action="${pageContext.request.contextPath}/new-match"method="POST">
                         <div class="form-group">
                             <label for="firstPlayerId">First player name:
-                                <input type="text" name="firstPlayerName" id="firstPlayerId" value="${firstPlayerName}">
+                                <input type="text" name="firstPlayerName" id="firstPlayerId" value="${firstPlayerName}" placeholder="name + surname">
                                 <c:set var="commonPlayerAnnotations" value="${violations['']}"></c:set>
                                 <c:if test="${violations.containsKey('firstPlayer.name') || not empty commonPlayerAnnotations}">
                                     <c:set var="firstPlayerAnnotations" value="${violations['firstPlayer.name']}"></c:set>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="form-group">
                             <label for="secondPlayerId">Second player name:
-                                <input type="text" name="secondPlayerName" id="secondPlayerId" value="${secondPlayerName}">
+                                <input type="text" name="secondPlayerName" id="secondPlayerId" value="${secondPlayerName}" placeholder="name + surname">
                                 <c:if test="${violations.containsKey('secondPlayer.name') || not empty commonPlayerAnnotations}">
                                     <c:set var="secondPlayerAnnotations" value="${violations['secondPlayer.name']}"></c:set>
                                     <c:choose>
