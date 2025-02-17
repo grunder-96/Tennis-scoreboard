@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = CorrectNameValidator.class)
 public @interface CorrectName {
 
-    String message() default "The name and surname must contain only english letters (minimum 1 character each).";
+    String message() default "The name and surname must contain only eng letters";
 
     Class<?>[] groups() default {};
 
